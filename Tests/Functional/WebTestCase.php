@@ -24,14 +24,4 @@ abstract class WebTestCase extends BaseWebTestCase
         $this->client = static::createClient();
         $this->container = static::$kernel->getContainer();
     }
-
-    /**
-     * @return string
-     */
-    public static function getKernelClass()
-    {
-        require_once __DIR__ . '/app/AppKernel.php';
-
-        return 'AppKernel';
-    }
 }
